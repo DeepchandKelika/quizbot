@@ -23,8 +23,13 @@ def env(key, default=None):
         raise ImproperlyConfigured("`%s` environment var is required." % key)
 
 
-def bool_value(key, default=False):
-    return bool(int(env(key, default)))
+# def bool_value(key, default=False):
+#     return bool(int(env(key, default)))
+def bool_value(key, default):
+    value = env(key, default)
+    if isinstance(value, str):
+        return value.lower() in ('true', '1', 'yes')
+    return bool(value)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

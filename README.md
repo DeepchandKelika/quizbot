@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Quiz bot
 This is a basic version of an interactive quiz bot that engages users in quizzes, evaluates their responses, and provides a final score based on their answers. In this we use Django channels websocket communication, redis as message broker, and Django sessions for temporary data storage.
 
@@ -17,3 +18,7 @@ Steps to run the project without Docker
 3. Install and run redis, and update the `CHANNEL_LAYERS` config in `settings.py`, if required.
 4. In the project root run `python manage.py runserver`
 4. Go to `127.0.0.1:8000` to view the chatbot
+=======
+# quizbot
+QuizBot for ImpressAI
+>>>>>>> 872a4c502add69075ffedc8de1780d31567b9800
